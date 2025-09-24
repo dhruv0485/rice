@@ -914,33 +914,6 @@ def main():
             
             st.markdown('</div>', unsafe_allow_html=True)
             
-            # Disease Probability Distribution
-            st.markdown('<div class="simple-card">', unsafe_allow_html=True)
-            st.markdown('<h2 class="section-title">📊 Detailed Analysis</h2>', unsafe_allow_html=True)
-            
-            col1, col2 = st.columns([1, 1])
-            
-            with col1:
-                st.markdown('<h3 class="highlight-text">Probability Breakdown:</h3>', unsafe_allow_html=True)
-                for i, prob in enumerate(probabilities):
-                    if i in labels:
-                        disease_name = labels[i]
-                        # Color code based on probability
-                        if prob > 0.5:
-                            color = "#00ff88"
-                        elif prob > 0.2:
-                            color = "#ff9f43"
-                        else:
-                            color = "#cccccc"
-                        st.markdown(f'<p style="color: {color}; font-size: 1.1rem; margin: 0.5rem 0;">• <strong>{disease_name}:</strong> {prob:.1%}</p>', unsafe_allow_html=True)
-            
-            with col2:
-                # Create and display pie chart
-                fig = create_disease_pie_chart(probabilities, labels)
-                if fig:
-                    st.pyplot(fig)
-            
-            st.markdown('</div>', unsafe_allow_html=True)
             
             # Disease Information
             if predicted_disease in DISEASE_INFO:
