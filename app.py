@@ -1,3 +1,16 @@
+"""
+Rice Leaf Disease Detection App
+==============================
+
+To run this app on localhost:5000, use one of these methods:
+
+1. Python script: python run_app.py
+2. Batch file: run_app.bat
+3. Direct command: streamlit run app.py --server.address localhost --server.port 5000
+
+The app will be available at: http://localhost:5000
+"""
+
 import streamlit as st
 import tensorflow as tf
 from tensorflow import keras
