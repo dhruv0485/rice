@@ -1,0 +1,4 @@
+0 None
+1 Brown Spot
+2 Bacterial Leaf Blight
+3 Leaf Smut
